@@ -1,25 +1,59 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
+const DEFFAULT_URL="https://pokeapi.co/api/v2/pokemon/ditto"
+
+const Info = ({data})=>{
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <article>
+      <h1>{data.name}</h1>
+      <p>{data.id}</p>
+      <p>{data.height}kg</p>
+      {
+
+
+        data.stats.map(i =>{
+          const {base_stat,stat}=i;
+          return (
+          <article>
+            <h2>stats</h2>
+            <p>{stat.name}</p>
+            <p>{base_stat}</p>
+          </article>)
+        })
+      }
+    </article>
+  )
+}
+
+class App extends React.Component {
+  constructor(props){
+    super(props);
+    this.state={
+      isLoading:true,
+      data:{}
+    };
+
+  }
+
+  componentDidMount(){
+    setTimeout(()=>{
+      fetch(DEFFAULT_URL)
+        .then(res => res.json())
+        .then(res => this.setState({
+          isLoading:false,
+          data:res
+        }))
+    },2000)
+  }
+
+  render(){
+    const {isLoading,data}=this.state;
+    if (isLoading){
+      return <h1>Loading...</h1>
+    }
+    return <Info data={data} />
+  }
 }
 
 export default App;
