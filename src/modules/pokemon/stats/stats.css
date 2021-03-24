@@ -1,0 +1,26 @@
+.stats-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.stats-container h2 {
+  flex: 0 0 100%;
+  text-align: center;
+}
+.stats-container p {
+  flex: 0 0 40%;
+  text-align: center;
+}
+
+.stat-container {
+  display: flex;
+  flex-direction: column;
+  background-color: darkgray;
+  border-radius: 10px;
+}
+.stat-name {
+  font-weight: bolder;
+}
+.stat-value {
+  color: red;
+}

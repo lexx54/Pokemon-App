@@ -1,0 +1,14 @@
+.data {
+  width: 275px;
+  margin: 0 auto;
+  background-color: indianred;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+}
+.data h2 {
+  text-align: center;
+  flex: 0 0 100%;
+}
