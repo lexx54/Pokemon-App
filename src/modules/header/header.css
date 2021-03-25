@@ -1,0 +1,9 @@
+.header {
+  min-height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-title {
+  font-size: 2rem;
+}

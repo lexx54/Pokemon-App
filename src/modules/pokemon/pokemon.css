@@ -1,13 +1,17 @@
 .pokemon {
+  min-height: 300px;
   width: 150px;
   margin: 0 auto;
   background-color: indianred;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+
   align-items: center;
   border-radius: 25px;
   padding: 1em 0.5rem;
+}
+.pokemon section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 .pokemon h2 {
   text-align: center;
