@@ -35,7 +35,10 @@ class App extends React.Component {
       return <h1>Loading...</h1>
     }
     return (
+      <div className="principal-page">
         <Pokemon data={data} />
+        <Pokemon data={data} />
+      </div>
     )
   }
 }

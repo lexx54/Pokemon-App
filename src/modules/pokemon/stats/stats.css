@@ -8,7 +8,7 @@
   text-align: center;
 }
 .stats-container p {
-  flex: 0 0 40%;
+  flex: 0 0 45%;
   text-align: center;
 }
 
@@ -17,6 +17,7 @@
   flex-direction: column;
   background-color: darkgray;
   border-radius: 10px;
+  margin: 0.5rem 0;
 }
 .stat-name {
   font-weight: bolder;

@@ -1,0 +1,21 @@
+.pokemon {
+  width: 150px;
+  margin: 0 auto;
+  background-color: indianred;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 25px;
+  padding: 1em 0.5rem;
+}
+.pokemon h2 {
+  text-align: center;
+  flex: 0 0 100%;
+}
+
+@media screen and (min-width: 720px) {
+  .pokemon {
+    width: 275px;
+  }
+}
